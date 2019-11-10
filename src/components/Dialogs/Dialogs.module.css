@@ -1,0 +1,22 @@
+
+
+.dialogsMain{
+    display: grid;
+    grid-template-areas:"d msgs"
+                        "d mi";  
+    grid-template-rows: 1fr 150px;
+    grid-template-columns: 1fr 10fr;  
+    grid-gap: 15px;
+}
+
+.dialogs{
+    grid-area: d;
+}
+
+.messages{
+    grid-area: msgs;
+}
+
+.messageInput{
+    grid-area: mi;
+}

@@ -1,3 +1,7 @@
-.head {
- 
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+.hdr {    
+    margin-left:70px;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;  
 }

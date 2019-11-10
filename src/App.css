@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+body {
+    font-family: Helvetica Neue;}
+
 .main_container {
   display: grid;    
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 70px 1fr;
   grid-template-columns: 1fr 3fr;
   grid-gap: 10px;
   grid-template-areas:"head head"
@@ -10,13 +14,15 @@
 .head{
   background-color: rgb(240, 240, 240);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  padding:15px;  
+  padding:5px;  
   grid-area: head;
 }
 .navl{
   text-align: center;
   font-size: 17px;
-  box-shadow: 5px 0 2px 0 rgba(0,0,0,0.5);
+  border-right: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
   padding:15px;
   grid-area: nav;
 }

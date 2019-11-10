@@ -1,3 +1,19 @@
-.sidebarButton {
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
+
+.sidebarButtons {
     padding: 10px;
+    
+    font-size: 25px;
+}
+
+.sidebarButton a {
+    margin-bottom: 45px;
+    text-decoration: none;
+    font-family: "Helvetica Neue";
+    color:black;
+}
+
+.sidebarButton {
+    margin-bottom: 15px; 
 }

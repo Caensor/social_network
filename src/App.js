@@ -12,7 +12,8 @@ import Settings from "./components/Settings/Settings";
 
 
 
-function App() {
+const App = props => {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -22,8 +23,8 @@ function App() {
           </div>
           <div className="navl"><Navbar /></div>
           <div className="content">
-            <Route path="/profile" render={()=><Profile/>}/>
-            <Route path="/dialogs" render={()=><Dialogs/>}/>
+            <Route path="/profile" render={()=><Profile posts={props.store.profilePage.posts}/>}/>
+            <Route path="/dialogs" render={()=><Dialogs dialogsPage={props.store.dialogsPage}/>}/>
             <Route path="/friends" render={()=><Friends/>}/>
             <Route path="/news" render={()=><News/>}/>
             <Route path="/music" render={()=><Music/>}/>

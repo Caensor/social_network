@@ -1,0 +1,23 @@
+.postItem{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top:15px;
+    display:grid;
+    grid-template-columns: 1fr  10fr;
+    grid-template-rows: 2fr  1fr;
+    grid-template-areas: "ava text"
+                         "ava likes";
+}
+
+.postContent{
+    font-size: 15px;
+    grid-area: text;
+}
+
+.likes{
+    font-size: 12px; 
+    grid-area: likes;
+}
+
+.avatar{
+    grid-area: ava;
+}
