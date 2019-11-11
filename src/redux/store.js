@@ -1,3 +1,5 @@
+import Rerender from "./../index";
+
 let store = 
     {profilePage: {
         posts:[
@@ -18,7 +20,26 @@ let store =
                 postCont: "Dooooooh",
                 likes: "1"
             }
-        ]
+        ],
+        textValue:"",
+
+        updateText : (text) =>{
+          store.profilePage.textValue = (text);
+          console.log(store.profilePage.textValue);
+          Rerender();},
+        
+        addNewPost : ()  =>{
+          console.log("addNewPost");
+          store.profilePage.posts.push({
+            id: 4,
+            postCont: store.profilePage.textValue,
+            likes: "3"
+        })
+        store.profilePage.textValue = "";
+        Rerender();
+        }
+        
+        
     },
     dialogsPage : {
         dialogItem :[ {

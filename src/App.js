@@ -23,7 +23,7 @@ const App = props => {
           </div>
           <div className="navl"><Navbar /></div>
           <div className="content">
-            <Route path="/profile" render={()=><Profile posts={props.store.profilePage.posts}/>}/>
+            <Route path="/profile" render={()=><Profile profilePage={props.store.profilePage}/>}/>
             <Route path="/dialogs" render={()=><Dialogs dialogsPage={props.store.dialogsPage}/>}/>
             <Route path="/friends" render={()=><Friends/>}/>
             <Route path="/news" render={()=><News/>}/>

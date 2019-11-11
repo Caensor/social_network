@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from "./AddMessage.module.css";
+import Button from "./../../Button/Button";
 
 const AddMessage = () =>{
+ 
   return(
-  <div className={classes.addText}>
-   <textarea>
-
-   </textarea>
-   <div className={classes.button}>send</div>
+  <div >
+   <textarea className={classes.addText}></textarea>
+   <button>send</button>
   </div>
   );
 }

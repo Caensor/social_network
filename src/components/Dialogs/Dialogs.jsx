@@ -7,7 +7,7 @@ import AddMessage from "./AddMessage/AddMessage";
 
 const Dialogs = (props) => {
 
-debugger;
+
   return (
     <div>
       <div className={classes.dialogsMain}>
