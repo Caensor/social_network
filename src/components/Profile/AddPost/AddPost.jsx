@@ -12,7 +12,7 @@ const AddPost = (props) =>{
 
     }    
 
-    let add = () =>{console.log("button")};
+    
     
     return(
     <div>

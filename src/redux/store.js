@@ -64,7 +64,17 @@ let store =
         {id:2, message:"Я у Мо"},
         {id:3, message:"Знов загорнеш а комірець..??"},
         {id:4, message:"Мардж, не починай"}
-    ]
+    ],
+    newMessageText: "",
+
+    addNewMessage: () =>{
+      let newMessage = {id:5, message:store.dialogsPage.newMessageText};
+      store.dialogsPage.messages.push(newMessage);
+      store.dialogsPage.newMessageText = "";
+      Rerender();},
+
+    changingValue: (text) =>{store.dialogsPage.newMessageText = text;
+    Rerender();}
       }
 }
 
