@@ -1,4 +1,4 @@
-import Rerender from "./../index";
+let Rerender = () => {};
 
 let store = 
     {profilePage: {
@@ -78,5 +78,10 @@ let store =
       }
 }
 
+export let storeRender = (rend) =>{
+  Rerender = rend;
+}
+
+Rerender();
 
 export default store;
