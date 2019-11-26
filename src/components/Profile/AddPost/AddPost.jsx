@@ -8,11 +8,13 @@ const AddPost = (props) =>{
     
     const newText = () =>{
         let text = textInput.current.value;
-        props.updateText(text);
+        props.dispatch ({type: "UPDATE-TEXT", text: text});
 
     }    
 
-    
+    const addNewPost = () =>{
+        props.dispatch ({type: "ADD-NEW-POST"});
+    }
     
     return(
     <div>
@@ -21,7 +23,7 @@ const AddPost = (props) =>{
             onChange={newText}
             value={props.textValue}>
         </textarea>        
-        <button onClick={props.addNewPost}>add</button>
+        <button onClick={addNewPost}>add</button>
    </div> 
    );
        

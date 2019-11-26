@@ -23,15 +23,21 @@ const App = props => {
           </div>
           <div className="navl"><Navbar /></div>
           <div className="content">
-            <Route path="/profile" render={()=><Profile profilePage={props.store.profilePage}/>}/>
-            <Route path="/dialogs" render={()=><Dialogs dialogsPage={props.store.dialogsPage}/>}/>
-            <Route path="/friends" render={()=><Friends/>}/>
-            <Route path="/news" render={()=><News/>}/>
-            <Route path="/music" render={()=><Music/>}/>
-            <Route path="/setings" render={()=><Settings/>}/>
+            <Route path="/profile" render={() => <Profile
+              profilePage={props.state.profilePage}
+              dispatch={props.dispatch} />} />
+
+            <Route path="/dialogs" render={() => <Dialogs
+              dialogsPage={props.state.dialogsPage}
+              dispatch={props.dispatch} />} />
+
+            <Route path="/friends" render={() => <Friends />} />
+            <Route path="/news" render={() => <News />} />
+            <Route path="/music" render={() => <Music />} />
+            <Route path="/setings" render={() => <Settings />} />
+          </div>
         </div>
       </div>
-    </div>
     </BrowserRouter>
 
   );

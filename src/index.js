@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from "./redux/store";
-import {storeRender} from "./redux/store";
 
-const Rerender = () =>{ReactDOM.render(<App store={store} />, document.getElementById('root'))}  ;
-storeRender(Rerender);
+
+const Rerender = () => {
+    ReactDOM.render(
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
+        document.getElementById('root'))};
+store._storeRender(Rerender);
 Rerender();
 
 export default Rerender;

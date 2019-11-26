@@ -7,9 +7,13 @@ const AddMessage = (props) => {
   let messageInput = React.createRef();  
 
   let changingValue = () =>{
-    let text = messageInput.current.value;
-    props.dialogsPage.changingValue(text);
-  }
+    let text = messageInput.current.value;    
+    props.dispatch({type:"CHANGING-VALUE", text: text})
+  };
+
+  let addNewMessage = () => {
+    props.dispatch({type:"ADD-NEW-MESSAGE"})
+  };
 
   return (
     <div>
@@ -21,7 +25,7 @@ const AddMessage = (props) => {
 
       </textarea>
 
-      <button onClick={props.dialogsPage.addNewMessage}>send</button>
+      <button onClick={addNewMessage}>send</button>
     </div>
   );
 }
