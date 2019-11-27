@@ -10,6 +10,7 @@ const Rerender = () => {
     ReactDOM.render(
         <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
         document.getElementById('root'))};
+        
 store._storeRender(Rerender);
 Rerender();
 

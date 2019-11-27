@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from "./AddMessage.module.css";
 import Button from "./../../Button/Button";
+import {changingValueActionCreator, addNewMessageActionCreator} from "./../../../redux/store";
+
 
 const AddMessage = (props) => {
  
@@ -8,11 +10,11 @@ const AddMessage = (props) => {
 
   let changingValue = () =>{
     let text = messageInput.current.value;    
-    props.dispatch({type:"CHANGING-VALUE", text: text})
+    props.dispatch(changingValueActionCreator(text));
   };
 
   let addNewMessage = () => {
-    props.dispatch({type:"ADD-NEW-MESSAGE"})
+    props.dispatch(addNewMessageActionCreator())
   };
 
   return (

@@ -87,12 +87,14 @@ let store = {
       this._state.dialogsPage.newMessageText = action.text;
     this.Rerender();
     }
-
   }
-
 }
 
 
+export const addNewPostActionCreator = () =>( {type: "ADD-NEW-POST"});
+export const updateTextActionCreator = (text) =>( {type: "UPDATE-TEXT", text: text});
 
+export const changingValueActionCreator = (text) =>({type:"CHANGING-VALUE", text: text});
+export const addNewMessageActionCreator = () =>({type:"ADD-NEW-MESSAGE"});
 
 export default store;
