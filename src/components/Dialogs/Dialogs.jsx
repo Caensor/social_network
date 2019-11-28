@@ -7,7 +7,6 @@ import AddMessage from "./AddMessage/AddMessage";
 
 const Dialogs = (props) => {
 
-
   return (
     <div>
       <div className={classes.dialogsMain}>

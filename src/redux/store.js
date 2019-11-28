@@ -1,3 +1,6 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+
 
 let store = {
   _state: {
@@ -61,40 +64,13 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-NEW-POST") {
-      this._state.profilePage.posts.push({
-        id: 4,
-        postCont: this._state.profilePage.textValue,
-        likes: "3"
-      })
-      this._state.profilePage.textValue = "";
-      this.Rerender();
-    }
+      this._state.profilePage =  profileReducer(this._state.profilePage, action);
+      this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
 
-    else if (action.type === "UPDATE-TEXT") {
-      this._state.profilePage.textValue = action.text;
       this.Rerender();
-    }
-
-    else if (action.type === "ADD-NEW-MESSAGE") {
-      let newMessage = { id: 5, message: this._state.dialogsPage.newMessageText };
-      this._state.dialogsPage.messages.push(newMessage);
-      this._state.dialogsPage.newMessageText = "";
-      this.Rerender();
-    }
-
-    else if (action.type === "CHANGING-VALUE"){
-      this._state.dialogsPage.newMessageText = action.text;
-    this.Rerender();
-    }
   }
 }
 
 
-export const addNewPostActionCreator = () =>( {type: "ADD-NEW-POST"});
-export const updateTextActionCreator = (text) =>( {type: "UPDATE-TEXT", text: text});
-
-export const changingValueActionCreator = (text) =>({type:"CHANGING-VALUE", text: text});
-export const addNewMessageActionCreator = () =>({type:"ADD-NEW-MESSAGE"});
 
 export default store;

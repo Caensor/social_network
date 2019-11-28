@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./AddMessage.module.css";
 import Button from "./../../Button/Button";
-import {changingValueActionCreator, addNewMessageActionCreator} from "./../../../redux/store";
+import {changingValueActionCreator, addNewMessageActionCreator} from "../../../redux/dialogsReducer";
 
 
 const AddMessage = (props) => {
