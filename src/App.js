@@ -23,13 +23,14 @@ const App = props => {
           </div>
           <div className="navl"><Navbar /></div>
           <div className="content">
-            <Route path="/profile" render={() => <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch} />} />
 
+           
+            <Route path="/profile" render={() => <Profile   
+              store={props.store} />} />
+           
+              
             <Route path="/dialogs" render={() => <Dialogs
-              dialogsPage={props.state.dialogsPage}
-              dispatch={props.dispatch} />} />
+              store = {props.store} />} />
 
             <Route path="/friends" render={() => <Friends />} />
             <Route path="/news" render={() => <News />} />

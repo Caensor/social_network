@@ -6,12 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import store from "./redux/redux-store";
 
 
-const rerenderEntireTree = () => {
+const rerenderEntireTree = (state) => {
     ReactDOM.render(
-        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
+        <App state={state} dispatch={store.dispatch.bind(store)} store={store} />,
         document.getElementById('root'))};
         
-rerenderEntireTree();
+rerenderEntireTree(store.getState());
 
 store.subscribe(()=> {
         let state = store.getState();

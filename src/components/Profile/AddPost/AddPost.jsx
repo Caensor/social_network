@@ -1,22 +1,22 @@
 import React from 'react';
 import classes from "./AddPost.module.css";
 import Button from "./../../Button/Button";
-import {addNewPostActionCreator, updateTextActionCreator} from "./../../../redux/profileReducer";
 
 
 const AddPost = (props) =>{
     let textInput = React.createRef();
-    
-    const newText = () =>{
-        let text = textInput.current.value;
-        props.dispatch (updateTextActionCreator(text));
 
-    }    
-
-    const addNewPost = () =>{
-        props.dispatch (addNewPostActionCreator());
+    let addNewPost = () =>{
+        props.addPost();
+        //props.dispatch (addNewPostActionCreator());
     }
     
+    let newText = () =>{
+        let text = textInput.current.value;
+        props.newPostText(text);
+    }    
+
+       
     return(
     <div>
         <textarea className={classes.addText}
