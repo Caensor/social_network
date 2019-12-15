@@ -57,17 +57,17 @@ let store = {
 
   getState() { return this._state },
 
-  Rerender() { },
+  _callSubscriber() { },
 
-  _storeRender(rend) {
-    this.Rerender = rend;
+  subscribe(observer) {
+    this._callSubscriber = observer;
   },
 
   dispatch(action) {
       this._state.profilePage =  profileReducer(this._state.profilePage, action);
       this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
 
-      this.Rerender();
+      this._callSubscriber();
   }
 }
 
