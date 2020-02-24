@@ -4,8 +4,7 @@ import classes from "./Content.module.css"
 
 const Content = () => {
   return (
-      <div>Content</div>
-
+    <div>Content</div>
   );
 }
 

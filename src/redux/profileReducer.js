@@ -33,13 +33,17 @@ const profileReducer = (state = initialState, action) =>{
         likes: "3"
         });
         state.textValue = "";
-        return state
+        return {
+          ...state, posts:[...state.posts], textValue: ""
+        }
        
         }
 
     case UPDATE_TEXT: {
         state.textValue = action.text;
-        return state;
+        return {
+          ...state, textValue: state.textValue
+        };
      }
     default: return state; 
     }
