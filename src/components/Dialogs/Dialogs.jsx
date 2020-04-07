@@ -2,6 +2,7 @@ import React from 'react';
 import classes from "./Dialogs.module.css"
 import DialogsList from "./DialogsList/DialogsList";
 import Messages from "./Messages/Messages";
+import {Button} from 'react-bootstrap';
 
 
 
@@ -36,7 +37,8 @@ const Dialogs = (props) => {
             onChange={changingValue}>
           </textarea>
 
-          <button onClick={addNewMessage}>send</button>
+          
+          <Button variant="primary" onClick={addNewMessage}>send</Button>{' '}
         </div>
 
 

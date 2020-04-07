@@ -1,0 +1,16 @@
+.card{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.247);
+    max-width: 550px;
+    
+    padding:5px;
+}
+
+.photo{
+    width: 150px;
+    height: 150px;
+    background-color: burlywood;
+}
+
+.follow{
+    margin: 15px;
+}

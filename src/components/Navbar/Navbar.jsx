@@ -15,6 +15,7 @@ const Navbar = () => {
         <div  className={classes.sidebarButton}><NavLink to="./news">Новости </NavLink></div>
         <div  className={classes.sidebarButton}><NavLink to="./music">Музыка </NavLink></div>
         <div  className={classes.sidebarButton}><NavLink to="./setings">Настройки </NavLink></div>
+        <div  className={classes.sidebarButton}><NavLink to="./users">Пользователи</NavLink></div>
       </div>
     </div>
 

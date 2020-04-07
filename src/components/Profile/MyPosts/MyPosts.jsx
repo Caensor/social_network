@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./MyPosts.module.css";
 import PostItem from "./../PostItem/PostItem";
-
+import {Button} from 'react-bootstrap';
 
 
 const MyPosts = (props) => {
@@ -31,7 +31,7 @@ const MyPosts = (props) => {
                     onChange={newText}
                     value={textValue}>
                 </textarea>
-                <button onClick={addNewPost}>add</button>
+                <Button variant="primary" onClick={addNewPost}>add</Button>{' '}
             </div>
             {post}
         </div >
